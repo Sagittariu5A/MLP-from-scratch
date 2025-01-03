@@ -278,10 +278,10 @@ class Sequential:
                     if early_stop_status == "breaking":
                         pass
 
-                epochs_str = f"{epoch: 3}/{epochs}"
-                batch_str = f"({id: 3}/{batch_count})"
-                loss_str = f"loss: {train_loss:.3f}  val_loss: {val_loss:.3f}"
-                accuracy_str = f"accuracy: {accuracy:.3f}  val_accuracy: {val_accuracy:.3f}"
+                epochs_str = f"{epoch: 4}/{epochs}"
+                batch_str = f"({id: 4}/{batch_count})"
+                loss_str = f"loss: {train_loss:.9f}  val_loss: {val_loss:.9f}"
+                accuracy_str = f"accuracy: {accuracy:.9f}  val_accuracy: {val_accuracy:.9f}"
 
                 if verbose == 2:
                     print(f"{epochs_str} {batch_str}  {loss_str} {accuracy_str} {early_stop_str}")
