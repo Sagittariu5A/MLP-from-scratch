@@ -56,7 +56,10 @@ class History:
             list_ = self.__list_metrics
         list_idx = [ self.__list_metrics.index(m) for m in list_ ]
         selected_ = metrics[:, list_idx]
-        return selected_.T if len(list_) > 1 else selected_
+        if len(list_) > 1:
+            return selected_.T
+        else:
+            return selected_.reshape(-1)
 
     def add_loss(self, loss: float) -> None:
         self.__loss.append(loss)
